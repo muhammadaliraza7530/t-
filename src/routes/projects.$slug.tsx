@@ -13,18 +13,20 @@ export const Route = createFileRoute("/projects/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-       return { meta: [{ title: "Project not found — Tameer" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [{ title: "Project not found — Tameer" }, { name: "robots", content: "noindex" }],
+      };
     }
     const { project } = loaderData;
-     const title = `${project.title}, ${project.location} — Tameer`;
+    const title = `${project.title}, ${project.location} — Tameer`;
     return {
       meta: [
         { title },
         { name: "description", content: project.blurb },
         { property: "og:title", content: title },
         { property: "og:description", content: project.blurb },
-         { property: "og:type", content: "website" },
-         { name: "twitter:card", content: "summary_large_image" },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },
@@ -50,6 +52,7 @@ function ProjectDetail() {
             <img
               src={project.image}
               alt={`${project.title} in ${project.location}`}
+              referrerPolicy="no-referrer"
               className="aspect-16/9 w-full object-cover"
             />
           </div>
@@ -57,8 +60,12 @@ function ProjectDetail() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">{project.status}</p>
-            <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] sm:text-5xl">{project.title}</h1>
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+              {project.status}
+            </p>
+            <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] sm:text-5xl">
+              {project.title}
+            </h1>
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               {project.blurb}
             </p>
@@ -67,7 +74,13 @@ function ProjectDetail() {
               {project.gallery.map((g: string, i: number) => (
                 <Reveal key={`${g}-${i}`} delay={i * 80}>
                   <div className="lit-panel overflow-hidden bg-card">
-                    <img src={g} alt={project.title} loading="lazy" className="aspect-4/3 w-full object-cover" />
+                    <img
+                      src={g}
+                      alt={project.title}
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      className="aspect-4/3 w-full object-cover"
+                    />
                   </div>
                 </Reveal>
               ))}
@@ -81,7 +94,10 @@ function ProjectDetail() {
               ["Style", project.category],
               ["Scope", "Design & construction"],
             ].map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-border/60 py-3 last:border-0">
+              <div
+                key={k}
+                className="flex justify-between gap-4 border-b border-border/60 py-3 last:border-0"
+              >
                 <dt className="text-muted-foreground">{k}</dt>
                 <dd className="font-semibold">{v}</dd>
               </div>
@@ -107,7 +123,12 @@ function ProjectDetail() {
                   params={{ slug: p.slug }}
                   className="lit-panel block overflow-hidden bg-card"
                 >
-                  <img src={p.image} alt={p.title} loading="lazy" className="aspect-4/3 w-full object-cover" />
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="aspect-4/3 w-full object-cover"
+                  />
                   <div className="p-5">
                     <h3 className="text-base font-bold">{p.title}</h3>
                     <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>

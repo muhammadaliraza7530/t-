@@ -13,19 +13,20 @@ import { CtaBand } from "@/components/PageBits";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-       { title: "Tameer — Luxury Construction & Interior, Pakistan" },
+      { title: "Tameer — Luxury Construction & Interior, Pakistan" },
       {
         name: "description",
         content:
-           "Tameer designs and builds luxury villas, Spanish-style houses and modern homes across Lahore, Faisalabad and Sialkot.",
+          "Tameer designs and builds luxury villas, Spanish-style houses and modern homes across Lahore, Faisalabad and Sialkot.",
       },
-       { property: "og:title", content: "Tameer — Luxury Construction & Interior" },
+      { property: "og:title", content: "Tameer — Luxury Construction & Interior" },
       {
         property: "og:description",
-        content: "Villas, Spanish houses and modern homes — designed, built and finished by one team.",
+        content:
+          "Villas, Spanish houses and modern homes — designed, built and finished by one team.",
       },
-       { property: "og:type", content: "website" },
-       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
@@ -70,6 +71,7 @@ function Hero() {
           fetchPriority={i === 0 ? "high" : "low"}
           loading={i === 0 ? "eager" : "lazy"}
           decoding="async"
+          referrerPolicy="no-referrer"
           className={`absolute inset-0 size-full object-cover transition-opacity duration-[1400ms] ${
             i === index ? "animate-slow-drift opacity-100" : "opacity-0"
           }`}
@@ -93,7 +95,10 @@ function Hero() {
         >
           {slide.title}
         </h1>
-         <p key={slide.highlight} className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/75 sm:text-base">
+        <p
+          key={slide.highlight}
+          className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/75 sm:text-base"
+        >
           {slide.highlight}
         </p>
 
@@ -179,15 +184,18 @@ function HomePage() {
               {services.map((s, i) => (
                 <Reveal key={s.slug} delay={i * 80} className="h-full">
                   <article className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]">
-                    <img 
-                      src={s.image} 
-                      alt={s.title} 
-                      loading="lazy" 
-                      className="aspect-16/10 w-full shrink-0 object-cover" 
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      className="aspect-16/10 w-full shrink-0 object-cover"
                     />
                     <div className="flex flex-col p-5 sm:p-6">
                       <h3 className="text-base font-bold sm:text-lg">{s.title}</h3>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">{s.short}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                        {s.short}
+                      </p>
                     </div>
                   </article>
                 </Reveal>
@@ -220,10 +228,13 @@ function HomePage() {
                   alt={`${p.title}, ${p.location}`}
                   loading="lazy"
                   draggable={false}
+                  referrerPolicy="no-referrer"
                   className="aspect-4/3 w-full shrink-0 object-cover"
                 />
                 <div className="flex flex-col p-5">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">{p.status}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+                    {p.status}
+                  </span>
                   <h3 className="mt-1.5 text-base font-bold">{p.title}</h3>
                   <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
                 </div>

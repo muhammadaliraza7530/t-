@@ -16,8 +16,6 @@ import { Footer } from "@/components/Footer";
 import { GlowLayer } from "@/components/GlowLayer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
-
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -83,12 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-       { title: "TAMEER — Construction & Interior Karachi" },
+      { title: "TAMEER — Construction & Interior Karachi" },
       {
         name: "description",
-        content: "Transforming Blueprints into Reality. Construction, renovation and interior services in Karachi.",
+        content:
+          "Transforming Blueprints into Reality. Construction, renovation and interior services in Karachi.",
       },
-       { name: "author", content: "TAMEER Construction & Interior" },
+      { name: "author", content: "TAMEER Construction & Interior" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -101,10 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap",
       },
 
-       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
 
@@ -146,5 +145,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-
-

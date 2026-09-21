@@ -1,0 +1,6 @@
+{
+  "name": "Tameer Construction & Interior",
+  "description": "Premium construction, interior design, and renovation services in Karachi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

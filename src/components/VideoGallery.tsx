@@ -36,10 +36,10 @@ export function VideoGallery() {
         <Reveal key={v.title} delay={i * 90}>
           <div
             onClick={() => play(i)}
-             className="lit-panel group relative cursor-pointer overflow-hidden bg-background"
+            className="lit-panel group relative cursor-pointer overflow-hidden bg-background"
           >
             {/* Mobile: Tall height | Desktop: Normal video height */}
-             <div className="aspect-[3/4] w-full overflow-hidden bg-background md:aspect-video">
+            <div className="aspect-[3/4] w-full overflow-hidden bg-background md:aspect-video">
               <video
                 ref={(el) => {
                   refs.current[i] = el;
@@ -55,12 +55,12 @@ export function VideoGallery() {
             </div>
 
             {/* Gradient Overlay */}
-             <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
 
             {/* Controls & Text Overlay */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3 sm:p-5">
               <div className="min-w-0 flex-1">
-                 <h3 className="truncate text-xs font-bold text-foreground sm:text-base md:text-lg">
+                <h3 className="truncate text-xs font-bold text-foreground sm:text-base md:text-lg">
                   {v.title}
                 </h3>
                 <p className="mt-0.5 truncate text-[9px] sm:text-xs uppercase tracking-wider text-primary">

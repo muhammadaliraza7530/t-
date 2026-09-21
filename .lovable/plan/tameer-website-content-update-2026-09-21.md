@@ -1,9 +1,11 @@
 # TAMEER Website Content Update
 
 ## Goal
+
 Replace the current Lahore-focused copy with the supplied TAMEER Construction & Interior content for Karachi, while preserving the existing visual style, media galleries, and Showreel.
 
 ## Changes
+
 - Update shared company details: tagline, Karachi address and service areas, phone, WhatsApp, email, hours, Facebook, statistics, services, process, testimonials, and project names.
 - Rework the header to include the supplied contact strip and menu. Keep all navigation functional; Renovation and Building Materials will lead to their matching service sections, and Get Quote will open the contact page.
 - Update the home page hero, trust bar, service cards, process, renovation call-to-action, and testimonials.
@@ -15,6 +17,7 @@ Replace the current Lahore-focused copy with the supplied TAMEER Construction & 
 - Update page titles and descriptions so every page consistently targets TAMEER’s Karachi construction and renovation services.
 
 ## Technical Details
+
 - Reuse the existing media files and design tokens; no visual redesign or backend will be added.
 - Use section anchors for Renovation and Building Materials rather than creating thin duplicate pages.
 - Preserve the existing project detail pages, updating their labels and Karachi project data to match the new portfolio.
