@@ -1,7 +1,5 @@
-import tameerLogo from "@/assets/tameer-logo.webp.asset.json";
-
 export const img = {
-  logo: tameerLogo.url,
+  logo: "/logo.webp",
   spanishVilla: "/homes/hero-spanish.jpg",
   luxuryVilla: "/homes/hero-villa.jpg",
   luxuryHouse: "/homes/hero-luxury.jpg",
@@ -59,15 +57,15 @@ export const stats = [
 ];
 
 export const posts = [
-  { image: "/posts/post-1.jpg", title: "120 Sq. Yds Villa", location: "DHA Phase 6", tag: "Completed" },
-  { image: "/posts/post-2.jpg", title: "Bungalow Renovation", location: "Bahria Town Karachi", tag: "Completed" },
-  { image: "/posts/post-3.jpg", title: "Drawing Room Interior", location: "Clifton", tag: "Completed" },
-  { image: "/posts/post-4.jpg", title: "Kitchen & Bath Remodel", location: "PECHS", tag: "Completed" },
-  { image: "/posts/post-5.jpg", title: "Luxury Finishing", location: "Karachi", tag: "On Site" },
-  { image: "/posts/post-6.jpg", title: "Grey Structure", location: "Scheme 33", tag: "In Progress" },
-  { image: "/posts/post-7.jpg", title: "Modern Interior", location: "Gulshan", tag: "In Progress" },
-  { image: "/posts/post-8.jpg", title: "Residential Elevation", location: "DHA Karachi", tag: "Design" },
-  { image: "/posts/post-9.jpg", title: "Turnkey Residence", location: "Karachi", tag: "Coming Soon" },
+  { image: "/posts/post1.jpeg", title: "120 Sq. Yds Villa", location: "DHA Phase 6", tag: "Completed" },
+  { image: "/posts/post2.jpeg", title: "Bungalow Renovation", location: "Bahria Town Karachi", tag: "Completed" },
+  { image: "/posts/post3.jpeg", title: "Drawing Room Interior", location: "Clifton", tag: "Completed" },
+  { image: "/posts/post4.jpeg", title: "Kitchen & Bath Remodel", location: "PECHS", tag: "Completed" },
+  { image: "/posts/post5.jpeg", title: "Luxury Finishing", location: "Karachi", tag: "On Site" },
+  { image: "/posts/post6.jpeg", title: "Grey Structure", location: "Scheme 33", tag: "In Progress" },
+  { image: "/posts/post7.jpeg", title: "Modern Interior", location: "Gulshan", tag: "In Progress" },
+  { image: "/posts/post1.jpeg", title: "Residential Elevation", location: "DHA Karachi", tag: "Design" },
+  { image: "/posts/post2.jpeg", title: "Turnkey Residence", location: "Karachi", tag: "Coming Soon" },
 ];
 
 export const videoGallery = [

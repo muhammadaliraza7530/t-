@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-border bg-card/40">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          <img src={site.logo} alt="TAMEER Construction & Interior logo" className="h-24 w-auto object-contain" />
+          <img src={site.logo} alt="TAMEER Construction & Interior logo" className="h-28 w-auto object-contain" />
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">Transforming Blueprints into Reality. Your trusted construction partner and one-stop solution for renovation, interior and construction in Karachi.</p>
           <a href={site.facebook} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"><Facebook className="size-4 text-primary" />Tameerconstruction.pk</a>
         </div>

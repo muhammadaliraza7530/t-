@@ -15,8 +15,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-500", scrolled ? "border-b border-border bg-background/90 backdrop-blur-xl" : "bg-background/70 backdrop-blur-md")}>
-      <div className="hidden border-b border-border/70 bg-card/70 md:block">
+    <header className={cn("fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-500", scrolled && "border-b border-border")}>
+      <div className="hidden border-b border-border/70 bg-transparent md:block">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-center gap-5 px-5 text-[10px] text-muted-foreground lg:justify-between lg:px-8">
           <a href={`tel:${site.phoneTel}`} className="flex items-center gap-1.5 hover:text-primary"><Phone className="size-3 text-primary" />Call Us: {site.phone}</a>
           <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary"><MessageCircle className="size-3 text-primary" />WhatsApp: +92 334 2889533</a>
@@ -26,7 +26,7 @@ export function Header() {
       </div>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link to="/" className="group flex items-center" onClick={() => setOpen(false)}>
-          <img src={site.logo} alt="TAMEER Construction & Interior logo" className="h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+          <img src={site.logo} alt="TAMEER Construction & Interior logo" className="h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
         </Link>
         <nav className="hidden items-center gap-5 xl:flex">
           {navLinks.map((link) => (
