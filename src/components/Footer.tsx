@@ -18,7 +18,7 @@ export function Footer() {
           <img
             src={site.logo}
             alt="TAMEER Construction & Interior logo"
-            className="h-28 w-auto object-contain"
+            className="h-18 w-auto object-contain rounded-xl"
           />
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Transforming Blueprints into Reality. Your trusted construction partner and one-stop
