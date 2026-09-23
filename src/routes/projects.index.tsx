@@ -1,24 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { projects } from "@/lib/site";
-import { ProjectCard } from "@/components/ProjectCard";
-import { CtaBand, PageHero } from "@/components/PageBits";
-import { Reveal, SectionHeading } from "@/components/ui-bits";
-import { PostsRail } from "@/components/PostsRail";
+import { ComingSoon } from "@/components/ComingSoon";
 import { img } from "@/lib/site-data";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Recent Construction Projects in Karachi | TAMEER" },
+      { title: "Projects & Portfolio — Coming Soon | TAMEER Construction & Interior" },
       {
         name: "description",
         content:
-          "Explore TAMEER villa construction, bungalow renovation, interior and remodeling projects across DHA, Bahria Town, Clifton and PECHS Karachi.",
+          "High-definition walkthroughs, floor plans, and photography of luxury villas, renovations, and interiors across DHA, Clifton, and Bahria Town Karachi coming soon.",
       },
-      { property: "og:title", content: "TAMEER Projects in Karachi" },
+      { property: "og:title", content: "Projects — Coming Soon | TAMEER" },
       {
         property: "og:description",
-        content: "Recent villa, renovation, interior and remodeling work across Karachi.",
+        content: "Explore upcoming villa construction and renovation projects across Karachi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,38 +25,11 @@ export const Route = createFileRoute("/projects/")({
 
 function ProjectsPage() {
   return (
-    <>
-      <PageHero
-        eyebrow="Portfolio"
-        title="Our Recent Projects in Karachi"
-        intro="Homes and spaces planned with care, built with quality and finished with precision."
-        image={img.luxuryHouse}
-      />
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {projects.map((project, index) => (
-              <Reveal key={project.slug} delay={index * 70}>
-                <ProjectCard project={project} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="overflow-hidden border-y border-border bg-card/30 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionHeading
-            eyebrow="Project posts"
-            title="More from our Karachi sites"
-            intro="A selection from our construction, renovation and interior work."
-          />
-        </div>
-        <div className="mt-12">
-          <PostsRail />
-        </div>
-      </section>
-      {/* Video gallery disabled */}
-      <CtaBand />
-    </>
+    <ComingSoon
+      pageName="Projects & Portfolio"
+      category="Portfolio Updating"
+      description="We are currently archiving and uploading full architectural galleries, 3D renderings, and completed site photos from our recent builds in DHA, Clifton, Bahria Town, and PECHS Karachi."
+      bgImage={img.luxuryHouse}
+    />
   );
 }

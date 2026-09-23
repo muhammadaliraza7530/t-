@@ -81,13 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TAMEER — Construction & Interior Karachi" },
+      { title: "Tameer Construction & Interior" },
       {
         name: "description",
-        content:
-          "Transforming Blueprints into Reality. Construction, renovation and interior services in Karachi.",
+        content: "Premium construction, interior design, and renovation services in Karachi.",
       },
-      { name: "author", content: "TAMEER Construction & Interior" },
+      { name: "author", content: "Tameer Construction & Interior" },
+      { property: "og:title", content: "Tameer Construction & Interior" },
+      {
+        property: "og:description",
+        content: "Premium construction, interior design, and renovation services in Karachi.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
