@@ -51,7 +51,7 @@ export function Header() {
           <img
             src={site.logo}
             alt="TAMEER Construction & Interior logo"
-            className="h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            className="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105 rounded-xl"
           />
         </Link>
         <nav className="hidden items-center gap-5 xl:flex">
